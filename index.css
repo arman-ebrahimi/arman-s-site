@@ -21,14 +21,11 @@ body{
     border-radius: 10px 0 0 0;
     color: #333;
 }
-.country{
+.left .name{
+    font-size: 10px;
     margin-left: 40px;
 }
-h1{
-    font-size: 50px;
-    font-family: "Times New Roman";
-    letter-spacing: 3px;
-}
+
 .description{
     font-size: 18px;
     position: absolute;
@@ -36,11 +33,82 @@ h1{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.description h1{
+    font-size: 50px;
+    font-family: "Times New Roman";
+    letter-spacing: 3px;
+    animation: slide 0.4s linear;
+}
+@keyframes slide {
+    0%{
+        transform: translateX(-150%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.description p{
+    animation: show 1s;
+}
+@keyframes show {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-80%, -50%);
+    z-index: 1;
+    background-color: white;
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    font-family: "Georgia";
+    overflow: hidden;
+    line-height: 80px; /*for vertically alignment(equal with height)*/
+    text-align: center;
+    font-size: 1.1em;
+    animation: blink 2s linear infinite;
+}
+@keyframes blink {
+    0%{
+        opacity: 0.5;
+    }
+    10%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+.circle div{
+    width: 50%;
+    height: 100%;
+}
+.circle div:first-child{
+    background-color: #555;
+    color: gold;
+}
+.circle div:last-child{
+    background-color: gold;
+    color: #222;
+}
+.circle span{
+    display: inline-block; /* Without it, rotate not applies(since span is a inline element)*/
+    transform: rotate(-15deg);
+}
 .right{
     background-image: url("https://armaneebrahimi.ir/IMG_%DB%B2%DB%B0%DB%B2%DB%B2%DB%B0%DB%B4%DB%B0%DB%B2_%DB%B1%DB%B2%DB%B2%DB%B2%DB%B3%DB%B0.png");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 100% 150%;
+    background-size: 140% 150%;
     width: 30%;
     height: 80%;
     background-color: #555;
