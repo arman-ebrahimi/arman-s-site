@@ -102,7 +102,7 @@ body{
     transform: rotate(-15deg);
 }
 .right{
-    background-image: url("IMG_۲۰۲۲۰۴۰۲_۱۲۲۲۳۰.png");
+    background-image: url("arman.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 140% 150%;
@@ -186,6 +186,9 @@ body{
 }
 
 @media screen and (max-width: 778px){
+    body{
+        padding: 40px 30px 0 30px
+    }
     .right{
         background-size: 170% 150%;
     }
@@ -196,8 +199,12 @@ body{
         padding: 5px 3px;
     }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px){
+    body{
+        padding: 40px 10px 0 10px
+    }
     .left{
+        border-radius: 0;
         width: 100%;
         order: 1;
     }
